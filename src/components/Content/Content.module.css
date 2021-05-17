@@ -1,0 +1,8 @@
+import {Component} from 'react';
+
+let Context=(props)=>{
+    return<div>
+        Здесь будет контент
+    </div>
+}
+export default Context
