@@ -1,8 +1,40 @@
-import {Component} from 'react';
+.contentContainer{
 
-let Context=(props)=>{
-    return<div>
-        Здесь будет контент
-    </div>
+    height: 200px;
+    background-color: crimson;
 }
-export default Context
+
+
+.mainContent{
+    display: inline-block;
+    height: 200px;
+    width:70%;
+    float: left;
+    /*background-color: #61dafb;*/
+}
+
+.iconContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+
+    /*background-color: #61dafb;*/
+    /*background-image:url(./icon/weatherIcon.png);*/
+    /*width: 30%;*/
+
+    /*background-size:220%;*/
+
+
+
+
+
+
+
+}
+
+
+.iconImg {
+
+}

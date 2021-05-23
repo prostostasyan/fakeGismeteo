@@ -1,8 +1,10 @@
-import {Component} from 'react'
-
-let Search =(props)=>{
-    return<div>
-        Здесь будет форма
-    </div>
+Form{
+    padding:20px 0;
+    background-color: navajowhite;
 }
-export default Search
+.searchCity{
+    display: inline-block;
+}
+.btnSearch{
+    display: inline-block;
+}
