@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="Сделал build" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1sez3waA9CSS6vJeMaWiFhD53f2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Header" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Header" />
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Search" />
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Content" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\public" />
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Search" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="" />
+      <created>1621247647044</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621247647044</updated>
+      <workItem from="1621247648174" duration="423000" />
+      <workItem from="1621248072184" duration="15507000" />
+      <workItem from="1621273471214" duration="323000" />
+      <workItem from="1621662309727" duration="13329000" />
+      <workItem from="1621714317469" duration="3263000" />
+      <workItem from="1621749898233" duration="23595000" />
+      <workItem from="1621858613732" duration="10014000" />
+    </task>
+    <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
+      <created>1621762231745</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621762231745</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Дабавил больше информации в Content.jsx">
+      <created>1621891242979</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1621891242979</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Попытка сделать форму из 3-х Input" />
+    <MESSAGE value="Дабавил больше информации в Content.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Дабавил больше информации в Content.jsx" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1543" y="270" key="CommitChangelistDialog2" timestamp="1621892441104">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1543" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1621892441104" />
+    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1621750400244">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1621750400244" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1621891263571">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1621891263571" />
+    <state x="1019" y="489" key="run.anything.popup" timestamp="1621252822996">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1621252822996" />
+    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1621758080023">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1621758080023" />
+  </component>
+</project>
