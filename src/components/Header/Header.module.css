@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100px;
+    background-color: #61dafb;
+}
+
+.logoHeader{
+    background: url("../../_img/logoHeader.PNG");
+    background-color: red;
+    height: 100%;
+    width: 180px;
+    background-size: 100% 100%;
+    color: red;
+}
+
+.link {
+    margin-left: 20px;
+    color: black;
+    font-weight: bolder;
+    font-size: 34px;
+}

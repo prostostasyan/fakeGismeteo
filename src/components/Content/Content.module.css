@@ -1,7 +1,7 @@
 .contentContainer{
 
-    height: 200px;
-    background-color: crimson;
+    height: 300px;
+    background-color: turquoise;
 }
 
 
@@ -10,6 +10,7 @@
     height: 200px;
     width:70%;
     float: left;
+
     /*background-color: #61dafb;*/
 }
 
@@ -19,22 +20,61 @@
     justify-content: center;
     height: 100%;
     width: 30%;
-
-    /*background-color: #61dafb;*/
-    /*background-image:url(./icon/weatherIcon.png);*/
-    /*width: 30%;*/
-
-    /*background-size:220%;*/
-
-
-
-
-
-
+    /*background-color: green;*/
 
 }
 
+.textImg {
+    font-weight: 700;
+    margin-left: -25px;
+}
 
-.iconImg {
+.temperature{
+    margin: 20px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.minTemp{
+    border:1px solid black;
+    background-color: greenyellow;
+    border-top:none;
+    border-left:none;
+    position: relative;
+    padding: 10px 10px;
+    top:23px;
 
+    text-align: left;
+    margin-left:-60px ;
+}
+.maxTemp{
+    display: inline-block;
+    background-color: rosybrown;
+    border:1px solid black;
+    border-top:none;
+    border-right:none;
+    padding: 10px 10px;
+}
+
+
+
+.data{
+    color:black;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    margin-left:250px ;
+}
+
+.text{
+    font-weight: 500;
+    font-size: 15px;
+    text-align: left;
+    margin-left:250px ;
+
+}
+.today{
+    color:grey;
+    font-size: 15px;
+    text-align: left;
+    margin-left:250px ;
 }

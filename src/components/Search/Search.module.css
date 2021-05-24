@@ -8,3 +8,15 @@ Form{
 .btnSearch{
     display: inline-block;
 }
+.error{
+    color: red;
+    font-weight: 700;
+    margin-right: 20px;
+}
+input[type=text] {
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}

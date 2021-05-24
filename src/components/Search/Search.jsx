@@ -1,38 +1,34 @@
-import {Component, useState} from 'react';
+import {useEffect, useState} from 'react';
 import style from './Search.module.css'
 
 let Form= (props) => {
-    let [value, setValue] = useState('Москва');
-    let [check, setCheck] = useState('true');
+    const [value, setValue] = useState({city:'', state:'', country:''});
+    const [check, setCheck] = useState('true');
 
-    let handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         props.onFormSubmit(value);
+        setValue({city:'', state:'', country:''})
     }
 
-    let handleChangeCity = (e) => {
-        setValue(e.target.value);
-        // setCheck('false')
-    }
-    let handleChangeCountry = (e) => {
-        setValue(e.target.value);
-        // setCheck('false')
-    }
-    let handleChangeState = (e) => {
-        setValue(e.target.value);
-        // setCheck('false')
+    const handleChangeCity = (e) => {
+        setValue({...value, city:e.target.value});
     }
 
+    const handleChangeState = (e) => {
+        setValue({...value, state:e.target.value});
+    }
 
-
-    console.log(props.cod)
+    const handleChangeCountry = (e) => {
+        setValue({...value, country:e.target.value});
+    }
 
     return <form onSubmit={handleSubmit}>
-        {props.cod == '404' && <p>{props.message}</p>}
-            <input  name="searchCity"   onChange={handleChangeCity()} placeholder ='Введите город'/>
-            <input  name="searchState"   onChange={handleChangeCountry} placeholder ='Введите область'/>
-            <input  name="searchCountry"   onChange={handleChangeState} placeholder ='Введите страну'/>
-            <div className={style.btnSearch}><input type="submit"   value='Выбрать'/></div>
+        {props.cod == '404' && <span className={style.error}>{props.message}</span>}
+            <input  name="searchCity" type="text" value ={value.city} onChange={handleChangeCity} placeholder ='Введите город'/>
+            {/*<input  name="searchState"  value ={value.state} onChange={handleChangeState} placeholder ='Введите область'/>*/}
+            {/*<input  name="searchCountry" value ={value.country}  onChange={handleChangeCountry} placeholder ='Введите страну'/>*/}
+        {value.city&&<div className={style.btnSearch}><input type="submit"   value='Выбрать'/></div>}
     </form>
 }
 
