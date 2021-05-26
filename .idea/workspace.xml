@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="Сделал build" />
+    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="Сделал build">
+      <change afterPath="$PROJECT_DIR$/src/сountryBase/countryBase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,6 +37,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -55,6 +68,7 @@
       <workItem from="1621714317469" duration="3263000" />
       <workItem from="1621749898233" duration="23595000" />
       <workItem from="1621858613732" duration="10014000" />
+      <workItem from="1622023618725" duration="7916000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -94,10 +108,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1621891263571" />
-    <state x="1019" y="489" key="run.anything.popup" timestamp="1621252822996">
+    <state x="1019" y="489" key="run.anything.popup" timestamp="1622035201715">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1621252822996" />
+    <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1622035201715" />
     <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1621758080023">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

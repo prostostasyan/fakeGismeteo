@@ -1,5 +1,7 @@
 import style from './Content.module.css'
 import icon from './icon/weatherIcon.png';
+// import сountryBase from "../../сountryBase/countryBase.json";
+let сountryObj = require('../../сountryBase/countryBase.json');
 
 const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
 const dayWeek = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ',];
@@ -7,46 +9,49 @@ const dayNow = new Date().getDay();
 
 
 let Context = ({main, weather, name, sys, wind}) => {
+    let countryName = сountryObj.country.find(country => country.alpha2 == sys.country).name;
+    console.log();
     const convertKtoC = T => {
-        const temp = Math.ceil((T - 273.15) * 10) / 10;
-        return (temp < 0) ? temp : "+" + temp
+        // const temp =  <span>{Math.ceil((T - 273.15) * 10) / 10}&deg;</span>;
+        const temp =  Math.ceil((T - 273.15) * 10) / 10;
+        return (temp < 0) ? <span>{Math.ceil((T - 273.15) * 10) / 10}&deg;</span> :   <span>+{Math.ceil((T - 273.15) * 10) / 10}&deg;</span>
     };
-    const directWind=(deg)=>{
-        if(deg<22.5 || deg>337.5){
+    const directWind = (deg) => {
+        if (deg < 22.5 || deg > 337.5) {
             return 'С'
-        }else if( deg>22.5 && deg<=67.5 ){
-            return  'СВ'
-        }else if( deg>67.5 && deg<=112.5){
-            return  'В'
-        } else if( deg>112.5 && deg<=157.5){
-            return  'ЮВ'
-        } else if( deg>157.5 && deg<=202.5){
-            return  'Ю'
-        } else if( deg>202.5 &&  deg<=247.5){
-            return  'ЮЗ'
-        } else if( deg>247.5 &&  deg<=292.5){
-            return  'З'
-        } else if( deg>292.5 &&  deg<=337.5){
-            return  'СЗ'
+        } else if (deg > 22.5 && deg <= 67.5) {
+            return 'СВ'
+        } else if (deg > 67.5 && deg <= 112.5) {
+            return 'В'
+        } else if (deg > 112.5 && deg <= 157.5) {
+            return 'ЮВ'
+        } else if (deg > 157.5 && deg <= 202.5) {
+            return 'Ю'
+        } else if (deg > 202.5 && deg <= 247.5) {
+            return 'ЮЗ'
+        } else if (deg > 247.5 && deg <= 292.5) {
+            return 'З'
+        } else if (deg > 292.5 && deg <= 337.5) {
+            return 'СЗ'
         } else
-            return  'штиль'
+            return 'штиль'
 
     }
-
     return <div className={style.contentContainer}>
 
         <div className={style.mainContent}>
-            <div className={style.text}> Страна: {sys.country} Город: {name} </div>
+            <div className={style.text}> Страна: {countryName} &emsp;  Город: {name} </div>
             <div className={style.data}
                  style={(dayNow === 0 || dayNow === 6) ? {color: 'red'} : {color: 'black'}}>{dayWeek[dayNow]}, {new Date().getDate()} {months[new Date().getMonth()]}</div>
             <div className={style.today}>сегодня</div>
-            <div className={style.text}>Ветер: {wind.speed} м/с,  {directWind(wind.deg)} </div>
-            <div className={style.text}>Давление: {Math.floor(main.pressure*0.75)} мм рт. ст.</div>
+            <div className={style.text}>Ветер: {wind.speed} м/с, {directWind(wind.deg)} </div>
+            <div className={style.text}>Давление: {Math.floor(main.pressure * 0.75)} мм рт. ст.</div>
             <div className={style.text}>Влажность: {main.humidity} %</div>
             <div className={style.text}>Температура:</div>
-            <div className={style.temperature}><span className={style.minTemp}>{convertKtoC(main.temp_min)}</span><span
-                className={style.maxTemp}>{convertKtoC(main.temp_max)}</span></div><br/>
-            <div className={style.text}>Чувствуется: {convertKtoC(main.feels_like)}</div>
+            <div className={style.temperature}><span className={style.minTemp}>{convertKtoC(main.temp_min)}</span>
+                <span className={style.maxTemp}>{convertKtoC(main.temp_max)}</span></div>
+            <br/>
+            <div className={style.text}>Чувствуется: {convertKtoC(main.feels_like)} </div>
         </div>
 
         <div className={style.iconContent}>
