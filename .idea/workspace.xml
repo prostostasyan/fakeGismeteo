@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="Сделал build">
-      <change afterPath="$PROJECT_DIR$/src/сountryBase/countryBase.json" afterDir="false" />
+    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../React/Reposit/MySite" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -68,7 +71,9 @@
       <workItem from="1621714317469" duration="3263000" />
       <workItem from="1621749898233" duration="23595000" />
       <workItem from="1621858613732" duration="10014000" />
-      <workItem from="1622023618725" duration="7916000" />
+      <workItem from="1622023618725" duration="10385000" />
+      <workItem from="1622105645862" duration="21672000" />
+      <workItem from="1622187167717" duration="16724000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -84,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621891242979</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавил в Content.jsx конвертацию стран по коду">
+      <created>1622035765010</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1622035765010</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,28 +105,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Попытка сделать форму из 3-х Input" />
     <MESSAGE value="Дабавил больше информации в Content.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Дабавил больше информации в Content.jsx" />
+    <MESSAGE value="Добавил в Content.jsx конвертацию стран по коду" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил в Content.jsx конвертацию стран по коду" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1543" y="270" key="CommitChangelistDialog2" timestamp="1621892441104">
+    <state x="1543" y="270" key="CommitChangelistDialog2" timestamp="1622035763034">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1543" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1621892441104" />
-    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1621750400244">
+    <state x="1543" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1622035763034" />
+    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1622042810598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1621750400244" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1621891263571">
+    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1622042810598" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1622035776922">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1621891263571" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1622035776922" />
     <state x="1019" y="489" key="run.anything.popup" timestamp="1622035201715">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1622035201715" />
-    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1621758080023">
+    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1622107096504">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1621758080023" />
+    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1622107096504" />
   </component>
 </project>

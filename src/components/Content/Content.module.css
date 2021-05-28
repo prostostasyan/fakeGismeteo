@@ -34,6 +34,7 @@
     font-weight: 500;
     font-size: 20px;
 }
+
 .minTemp{
     border:1px solid black;
     background-color: greenyellow;
@@ -55,8 +56,6 @@
     padding: 10px 10px;
 }
 
-
-
 .data{
     color:black;
     font-weight: 700;
@@ -72,9 +71,57 @@
     margin-left:250px ;
 
 }
+
 .today{
     color:grey;
     font-size: 15px;
+    text-align: left;
+    margin-left:250px ;
+}
+
+.longWeather{
+    /*border: 1px solid black;*/
+}
+.futureWeather{
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid black;
+    position: relative;
+    /*bottom:50%;*/
+    transform: translate(0, 25%)
+}
+
+.futureWeather:first-child{
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.futureWeather:last-child{
+    display: inline-block;
+    margin-left: 0px;
+
+}
+
+.longWeather button{
+    display: inline-block;
+    color: rosybrown;
+    height: 200px;
+    width: 40px;
+    position: relative;
+    transform: translate(0, -15%)
+}
+
+
+.miniIconImg{
+
+}
+
+.dayWeather{
+    font-size: 24px;
+    font-weight: bolder;
     text-align: left;
     margin-left:250px ;
 }

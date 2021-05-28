@@ -1,20 +1,71 @@
 import style from './Content.module.css'
 import icon from './icon/weatherIcon.png';
-// import сountryBase from "../../сountryBase/countryBase.json";
-let сountryObj = require('../../сountryBase/countryBase.json');
+import {useState, useEffect} from 'react'
 
-const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-const dayWeek = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ',];
-const dayNow = new Date().getDay();
+import moment from 'moment';// подключаем библиотеку для удобной работы с датой
+import 'moment/locale/ru';// подключаем язык
+moment.locale('ru'); // выбираем нужный язык
 
 
-let Context = ({main, weather, name, sys, wind}) => {
-    let countryName = сountryObj.country.find(country => country.alpha2 == sys.country).name;
-    console.log();
+const сountryObj = require('../../сountryBase/countryBase.json');//подключаем базу стран в JSON
+
+
+let Context = ({main, weather, name, sys, wind, list}) => {
+    const finishToday = 8 - moment(list[0].dt * 1000).format('HH') / 3;
+    const finishMax = 40 - moment(list[0].dt * 1000).format('HH') / 3;
+    const dayNow = new Date().getTime();
+
+    const [start, setStart] = useState(0);
+    const [dayWeather, setDayWeather] = useState(moment().format('MMMM Do YYYY'));
+    const [finish, setFinish] = useState( finishToday);
+    const [getTime,setGetTime] =useState(dayNow);
+
+    useEffect(() => {
+        setDayWeather(moment(getTime).format('MMMM Do, YYYY'));
+        console.log(moment(dayWeather).format('e'));
+    });
+
+    const day =()=>{
+        if(moment(dayNow).format('D') == moment(list[start].dt*1000).format('D')) return ('сегодня');
+        if(1+ +(moment(dayNow).format('D')) == moment(list[start].dt*1000).format('D')) return('завтра');
+        return ' '
+    }
+
+    const nextPrevWeather = (btn) => {
+        switch (btn) {
+            case 'prev':
+                setGetTime(getTime-24*3600*1000);
+                if((start-8)<0){
+                    setStart(0);
+                    setFinish(finishToday);
+                }else{
+                    setStart(start-8);
+                    setFinish(finish-8);
+                }
+                break;
+            case 'next':
+                setGetTime(getTime+24*3600*1000);
+                if((finish+8)<finishMax){
+                    setStart(finish);
+                    setFinish(finish+8);
+                }else{
+                    setStart(finishMax-8);
+                    setFinish(finishMax);
+                }
+                break;
+        }
+    }
+console.log('start:',start)
+    console.log('finish:',finish)
+    const countryName = () => {
+        let objCont = сountryObj.country.find(country => country.alpha2 === sys.country);
+        return (objCont) ? objCont.name : 'Неизвестно'
+    };
+    console.log(list);
     const convertKtoC = T => {
-        // const temp =  <span>{Math.ceil((T - 273.15) * 10) / 10}&deg;</span>;
-        const temp =  Math.ceil((T - 273.15) * 10) / 10;
-        return (temp < 0) ? <span>{Math.ceil((T - 273.15) * 10) / 10}&deg;</span> :   <span>+{Math.ceil((T - 273.15) * 10) / 10}&deg;</span>
+        const temp = Math.ceil((T - 273.15) * 10) / 10;
+        return (temp < 0) ? <span>{Math.ceil((T - 273.15) * 10) / 10}&deg;</span> :
+            <span>+{Math.ceil((T - 273.15) * 10) / 10}&deg;</span>
     };
     const directWind = (deg) => {
         if (deg < 22.5 || deg > 337.5) {
@@ -35,15 +86,15 @@ let Context = ({main, weather, name, sys, wind}) => {
             return 'СЗ'
         } else
             return 'штиль'
-
     }
+
     return <div className={style.contentContainer}>
 
         <div className={style.mainContent}>
-            <div className={style.text}> Страна: {countryName} &emsp;  Город: {name} </div>
+            <div className={style.text}> Страна: {countryName()} &emsp;  Город: {name} </div>
             <div className={style.data}
-                 style={(dayNow === 0 || dayNow === 6) ? {color: 'red'} : {color: 'black'}}>{dayWeek[dayNow]}, {new Date().getDate()} {months[new Date().getMonth()]}</div>
-            <div className={style.today}>сегодня</div>
+                 style={(moment().format('e') == 5 || (moment().format('e')) == 6) ? {color: 'red'} : {color: 'black'}}>{moment().format('MMMM Do YYYY, HH:mm')}</div>
+            <div className={style.today}>сейчас</div>
             <div className={style.text}>Ветер: {wind.speed} м/с, {directWind(wind.deg)} </div>
             <div className={style.text}>Давление: {Math.floor(main.pressure * 0.75)} мм рт. ст.</div>
             <div className={style.text}>Влажность: {main.humidity} %</div>
@@ -58,9 +109,38 @@ let Context = ({main, weather, name, sys, wind}) => {
             <img src={`http://openweathermap.org/img/wn/${weather[0].icon}@4x.png`} className={style.iconImg}/>
             <div className={style.textImg}>{weather[0].description}</div>
         </div>
+
+        <div>
+            <div className={style.dayWeather}   style={(moment(list[start].dt*1000).format('e') == 5 || (moment(list[start].dt*1000).format('e') == 6)) ? {color: 'red'} : {color: 'black'}}>{dayWeather}</div>
+            <div className={style.today}  >
+                {day()}
+            </div>
+            <div className={style.longWeather}>
+                {(start!==0)&&<button onClick={()=>nextPrevWeather('prev')}>&#10094;</button>}
+                {list.slice(start, finish).map((pieceTime, index) => {
+                    const match = moment(pieceTime.dt * 1000).format('ddd, D MMM');
+                    const time = moment(pieceTime.dt * 1000).format('HH:mm');
+                    return <div key={index} className={style.futureWeather}>
+                        <div>{match}</div>
+                        <div>{time}</div>
+                        <div>t: {convertKtoC(pieceTime.main.temp)} </div>
+                        <img src={`http://openweathermap.org/img/wn/${pieceTime.weather[0].icon}@2x.png`}
+                             className={style.miniIconImg}/>
+                    </div>
+                })}
+                {(finish!==finishMax)&&<button onClick={()=>nextPrevWeather('next')}>&#10095;</button>}
+            </div>
+
+        </div>
+
     </div>
 }
 export default Context
+
+
+// const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+// const dayWeek = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ',];
+// const dayNow = new Date().getDay();
 
 
 // const weatherPic = {
