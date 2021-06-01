@@ -3,65 +3,67 @@ import icon from './icon/weatherIcon.png';
 import {useState, useEffect} from 'react'
 
 import moment from 'moment';// подключаем библиотеку для удобной работы с датой
-import 'moment/locale/ru';// подключаем язык
+import 'moment/locale/ru';
+import {Map, Placemark, YMaps} from "react-yandex-maps";
+// подключаем язык
 moment.locale('ru'); // выбираем нужный язык
 
 
 const сountryObj = require('../../сountryBase/countryBase.json');//подключаем базу стран в JSON
 
 
-let Context = ({main, weather, name, sys, wind, list}) => {
+let Context = ({main, weather, name, sys, wind, list, coord}) => {
     const finishToday = 8 - moment(list[0].dt * 1000).format('HH') / 3;
     const finishMax = 40 - moment(list[0].dt * 1000).format('HH') / 3;
     const dayNow = new Date().getTime();
 
     const [start, setStart] = useState(0);
     const [dayWeather, setDayWeather] = useState(moment().format('MMMM Do YYYY'));
-    const [finish, setFinish] = useState( finishToday);
-    const [getTime,setGetTime] =useState(dayNow);
+    const [finish, setFinish] = useState(finishToday);
+    const [getTime, setGetTime] = useState(dayNow);
 
     useEffect(() => {
         setDayWeather(moment(getTime).format('MMMM Do, YYYY'));
-        console.log(moment(dayWeather).format('e'));
+        // console.log(moment(dayWeather).format('e'));
     });
 
-    const day =()=>{
-        if(moment(dayNow).format('D') == moment(list[start].dt*1000).format('D')) return ('сегодня');
-        if(1+ +(moment(dayNow).format('D')) == moment(list[start].dt*1000).format('D')) return('завтра');
+    const day = () => {
+        if (moment(dayNow).format('D') == moment(list[start].dt * 1000).format('D')) return ('сегодня');
+        if (1 + +(moment(dayNow).format('D')) == moment(list[start].dt * 1000).format('D')) return ('завтра');
         return ' '
     }
 
     const nextPrevWeather = (btn) => {
         switch (btn) {
             case 'prev':
-                setGetTime(getTime-24*3600*1000);
-                if((start-8)<0){
+                setGetTime(getTime - 24 * 3600 * 1000);
+                if ((start - 8) < 0) {
                     setStart(0);
                     setFinish(finishToday);
-                }else{
-                    setStart(start-8);
-                    setFinish(finish-8);
+                } else {
+                    setStart(start - 8);
+                    setFinish(finish - 8);
                 }
                 break;
             case 'next':
-                setGetTime(getTime+24*3600*1000);
-                if((finish+8)<finishMax){
+                setGetTime(getTime + 24 * 3600 * 1000);
+                if ((finish + 8) < finishMax) {
                     setStart(finish);
-                    setFinish(finish+8);
-                }else{
-                    setStart(finishMax-8);
+                    setFinish(finish + 8);
+                } else {
+                    setStart(finishMax - 8);
                     setFinish(finishMax);
                 }
                 break;
         }
     }
-console.log('start:',start)
-    console.log('finish:',finish)
+    // console.log('start:', start)
+    // console.log('finish:', finish)
     const countryName = () => {
         let objCont = сountryObj.country.find(country => country.alpha2 === sys.country);
         return (objCont) ? objCont.name : 'Неизвестно'
     };
-    console.log(list);
+    // console.log(list);
     const convertKtoC = T => {
         const temp = Math.ceil((T - 273.15) * 10) / 10;
         return (temp < 0) ? <span>{Math.ceil((T - 273.15) * 10) / 10}&deg;</span> :
@@ -89,6 +91,16 @@ console.log('start:',start)
     }
 
     return <div className={style.contentContainer}>
+        <div className={style.mapContent}>
+            <YMaps >
+                <div className={style.map}>
+                    <Map className={style.map}  state ={{center: [coord.lat, coord.lon], zoom: 11}} defaultState={{center: [55.75, 37.57], zoom: 9}}>
+                        {/*<Placemark geometry={[coord.lat, coord.lon]} />*/}
+                    </Map>
+                </div>
+                {/*[coord.lat, coord.lon]*/}
+            </YMaps>
+        </div>
 
         <div className={style.mainContent}>
             <div className={style.text}> Страна: {countryName()} &emsp;  Город: {name} </div>
@@ -110,13 +122,14 @@ console.log('start:',start)
             <div className={style.textImg}>{weather[0].description}</div>
         </div>
 
-        <div>
-            <div className={style.dayWeather}   style={(moment(list[start].dt*1000).format('e') == 5 || (moment(list[start].dt*1000).format('e') == 6)) ? {color: 'red'} : {color: 'black'}}>{dayWeather}</div>
-            <div className={style.today}  >
+        <div className={style.longWeatherContent}>
+            <div className={style.dayWeather}
+                 style={(moment(list[start].dt * 1000).format('e') == 5 || (moment(list[start].dt * 1000).format('e') == 6)) ? {color: 'red'} : {color: 'black'}}>{dayWeather}</div>
+            <div className={style.today}>
                 {day()}
             </div>
             <div className={style.longWeather}>
-                {(start!==0)&&<button onClick={()=>nextPrevWeather('prev')}>&#10094;</button>}
+                {(start !== 0) && <button onClick={() => nextPrevWeather('prev')}>&#10094;</button>}
                 {list.slice(start, finish).map((pieceTime, index) => {
                     const match = moment(pieceTime.dt * 1000).format('ddd, D MMM');
                     const time = moment(pieceTime.dt * 1000).format('HH:mm');
@@ -128,7 +141,7 @@ console.log('start:',start)
                              className={style.miniIconImg}/>
                     </div>
                 })}
-                {(finish!==finishMax)&&<button onClick={()=>nextPrevWeather('next')}>&#10095;</button>}
+                {(finish !== finishMax) && <button onClick={() => nextPrevWeather('next')}>&#10095;</button>}
             </div>
 
         </div>
