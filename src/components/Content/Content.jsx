@@ -21,11 +21,20 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
     const [dayWeather, setDayWeather] = useState(moment().format('MMMM Do YYYY'));
     const [finish, setFinish] = useState(finishToday);
     const [getTime, setGetTime] = useState(dayNow);
+    // const [_coord, setCoord] = useState(coord);
+
 
     useEffect(() => {
         setDayWeather(moment(getTime).format('MMMM Do, YYYY'));
         // console.log(moment(dayWeather).format('e'));
+
     });
+    useEffect(() => {
+        setStart(0);
+        setFinish(finishToday);
+        // console.log(moment(dayWeather).format('e'));
+    },[coord]);
+
 
     const day = () => {
         if (moment(dayNow).format('D') == moment(list[start].dt * 1000).format('D')) return ('сегодня');
@@ -95,10 +104,8 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
             <YMaps >
                 <div className={style.map}>
                     <Map className={style.map}  state ={{center: [coord.lat, coord.lon], zoom: 11}} defaultState={{center: [55.75, 37.57], zoom: 9}}>
-                        {/*<Placemark geometry={[coord.lat, coord.lon]} />*/}
                     </Map>
                 </div>
-                {/*[coord.lat, coord.lon]*/}
             </YMaps>
         </div>
 

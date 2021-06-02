@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +40,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -74,7 +73,8 @@
       <workItem from="1622023618725" duration="10385000" />
       <workItem from="1622105645862" duration="21672000" />
       <workItem from="1622187167717" duration="17397000" />
-      <workItem from="1622533744266" duration="10836000" />
+      <workItem from="1622533744266" duration="12911000" />
+      <workItem from="1622622751998" duration="3951000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -104,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622211064884</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавил  карту Yandex">
+      <created>1622561539407</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622561539407</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,21 +122,22 @@
     <MESSAGE value="Дабавил больше информации в Content.jsx" />
     <MESSAGE value="Добавил в Content.jsx конвертацию стран по коду" />
     <MESSAGE value="Добавил слайдер с прогнозом на несколько дней вперед с интеррвалом в 3  часа" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил слайдер с прогнозом на несколько дней вперед с интеррвалом в 3  часа" />
+    <MESSAGE value="Добавил  карту Yandex" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил  карту Yandex" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1543" y="270" key="CommitChangelistDialog2" timestamp="1622211062669">
+    <state x="1468" y="270" key="CommitChangelistDialog2" timestamp="1622561537379">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1543" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1622211062669" />
+    <state x="1468" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1622561537379" />
     <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1622042810598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1622042810598" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1622211073554">
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1622561557689">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1622211073554" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1622561557689" />
     <state x="1019" y="489" key="run.anything.popup" timestamp="1622035201715">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

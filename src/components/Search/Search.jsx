@@ -15,13 +15,13 @@ let Form= (props) => {
         setValue({...value, city:e.target.value});
     }
 
-    const handleChangeState = (e) => {
-        setValue({...value, state:e.target.value});
-    }
-
-    const handleChangeCountry = (e) => {
-        setValue({...value, country:e.target.value});
-    }
+    // const handleChangeState = (e) => {
+    //     setValue({...value, state:e.target.value});
+    // }
+    //
+    // const handleChangeCountry = (e) => {
+    //     setValue({...value, country:e.target.value});
+    // }
 
     return <form onSubmit={handleSubmit}>
         {props.cod == '404' && <span className={style.error}>{props.message}</span>}
@@ -33,7 +33,7 @@ let Form= (props) => {
 }
 
 
-let Search =(props)=>{
+const Search =(props)=>{
     return<div className={style.searchContainer}>
         <Form onFormSubmit= {(city)=>props.onFormSubmit(city)}  {...props.data}/>
     </div>

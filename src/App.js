@@ -4,7 +4,6 @@ import Search from "./components/Search/Search";
 import Content from "./components/Content/Content";
 import axios from 'axios'
 import Header from "./components/Header/Header";
-import { YMaps, Map } from 'react-yandex-maps';
 
 const myID='4319e25fb7c3d02491092a7b206ffc8c';
 
@@ -16,7 +15,7 @@ const myID='4319e25fb7c3d02491092a7b206ffc8c';
 
 
 function App() {
-    const [myState,setMyState] = useState('');
+    // const [myState,setMyState] = useState('');
     const [weatherNow,setWeatherNow] = useState('');
     const [weatherLong,setWeatherLong] = useState('');
     const [responseErr,setResponseErr]= useState('');
@@ -58,7 +57,6 @@ function App() {
                 }
             })
     }
-
 
     return (
 
