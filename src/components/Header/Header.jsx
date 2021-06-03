@@ -6,14 +6,11 @@ import style from './Header.module.css'
 function Header() {
     return <header >
         <div className={style.logoHeader}></div>
-        <a
-            className= {style.link}
-            // href="http://localhost:3000"
-            target="_blank"
-            rel="noopener noreferrer"
+        <h1
+            className= {style.mainName}
         >
             FakeGismetio
-        </a>
+        </h1>
     </header>
 }
 export default Header

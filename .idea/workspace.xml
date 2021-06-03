@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,8 @@
       <workItem from="1622105645862" duration="21672000" />
       <workItem from="1622187167717" duration="17397000" />
       <workItem from="1622533744266" duration="12911000" />
-      <workItem from="1622622751998" duration="3951000" />
+      <workItem from="1622622751998" duration="5597000" />
+      <workItem from="1622711704187" duration="1523000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -111,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622561539407</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавил небольшие изменения в слайдере">
+      <created>1622628317660</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622628317660</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,21 +129,22 @@
     <MESSAGE value="Добавил в Content.jsx конвертацию стран по коду" />
     <MESSAGE value="Добавил слайдер с прогнозом на несколько дней вперед с интеррвалом в 3  часа" />
     <MESSAGE value="Добавил  карту Yandex" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил  карту Yandex" />
+    <MESSAGE value="Добавил небольшие изменения в слайдере" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил небольшие изменения в слайдере" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1468" y="270" key="CommitChangelistDialog2" timestamp="1622561537379">
+    <state x="1468" y="270" key="CommitChangelistDialog2" timestamp="1622628315637">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1468" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1622561537379" />
+    <state x="1468" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1622628315637" />
     <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1622042810598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1622042810598" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1622561557689">
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1622628347541">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1622561557689" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1622628347541" />
     <state x="1019" y="489" key="run.anything.popup" timestamp="1622035201715">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
