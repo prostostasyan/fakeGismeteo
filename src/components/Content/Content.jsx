@@ -27,7 +27,6 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
     useEffect(() => {
         setDayWeather(moment(getTime).format('MMMM Do, YYYY'));
         // console.log(moment(dayWeather).format('e'));
-
     });
     useEffect(() => {
         setStart(0);

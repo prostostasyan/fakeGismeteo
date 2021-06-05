@@ -3,7 +3,7 @@ import style from './Search.module.css'
 
 let Form= (props) => {
     const [value, setValue] = useState({city:'', state:'', country:''});
-    const [check, setCheck] = useState('true');
+    // const [check, setCheck] = useState('true');
 
     const handleSubmit = (e) => {
         e.preventDefault();

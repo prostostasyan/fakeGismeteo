@@ -7,13 +7,6 @@ import Header from "./components/Header/Header";
 
 const myID='4319e25fb7c3d02491092a7b206ffc8c';
 
-
-
-
-
-
-
-
 function App() {
     // const [myState,setMyState] = useState('');
     const [weatherNow,setWeatherNow] = useState('');
@@ -40,8 +33,8 @@ function App() {
                     console.log(error.request)
                 }
             })
-
     }
+
     const getRequest2 = (city)=>{
         console.log(city)
         axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&appid=${myID}&lang=ru`)
@@ -59,13 +52,12 @@ function App() {
     }
 
     return (
-
         <div className="App">
             <Header/>
             <Search onFormSubmit={(city) => getRequest(city) } data = {responseErr.data}/>
             {weatherLong && <Content {...weatherNow.data} list={weatherLong}/>}
         </div>
-    );
+    )
 }
 
 export default App;
