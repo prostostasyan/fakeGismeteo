@@ -13,7 +13,7 @@ function App() {
     const [weatherLong,setWeatherLong] = useState('');
     const [responseErr,setResponseErr]= useState('');
 
-    const getRequest = (data)=>{
+    const getNowRequest = (data)=>{
         console.log(data);
         axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${data.city}&lang=ru&appid=${myID}&lang=ru`)
             .then(res=> {
@@ -23,7 +23,7 @@ function App() {
                 setResponseErr('');
                 return res.data.name
             })
-            .then(town =>getRequest2(town))
+            .then(town =>getFutureRequest(town))
             .catch(error => {
                 if (error.response) {
                     console.log(error.response);
@@ -34,7 +34,7 @@ function App() {
             })
     }
 
-    const getRequest2 = (city)=>{
+    const getFutureRequest = (city)=>{
         console.log(city)
         axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&appid=${myID}&lang=ru`)
             .then(res=> {
@@ -53,7 +53,7 @@ function App() {
     return (
         <div className="App">
             <Header/>
-            <Search onFormSubmit={(city) => getRequest(city) } data = {responseErr.data}/>
+            <Search onFormSubmit={(city) => getNowRequest(city) } data = {responseErr.data}/>
             {weatherLong && <Content {...weatherNow.data} list={weatherLong}/>}
         </div>
     )
