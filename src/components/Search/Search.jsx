@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import style from './Search.module.css'
 
 let Form= (props) => {
@@ -24,7 +24,7 @@ let Form= (props) => {
     // }
 
     return <form onSubmit={handleSubmit}>
-        {props.cod == '404' && <span className={style.error}>{props.message}</span>}
+        {props.code === '404' && <span className={style.error}>{props.message}</span>}
             <input  name="searchCity" type="text" value ={value.city} onChange={handleChangeCity} placeholder ='Введите город'/>
             {/*<input  name="searchState"  value ={value.state} onChange={handleChangeState} placeholder ='Введите область'/>*/}
             {/*<input  name="searchCountry" value ={value.country}  onChange={handleChangeCountry} placeholder ='Введите страну'/>*/}

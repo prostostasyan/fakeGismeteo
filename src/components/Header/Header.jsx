@@ -1,11 +1,11 @@
-import {useEffect, useState} from 'react';
+import React from 'react';
 import style from './Header.module.css'
 // import logo from "../../_img/logoHeader.svg";
 
 
 function Header() {
     return <header >
-        <div className={style.logoHeader}></div>
+        <div className={style.logoHeader}> </div>
         <h1
             className= {style.mainName}
         >

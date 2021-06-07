@@ -1,4 +1,5 @@
-import {useState, useEffect} from 'react'
+import React, {useState} from 'react';
+
 import './App.css';
 import Search from "./components/Search/Search";
 import Content from "./components/Content/Content";
@@ -8,20 +9,18 @@ import Header from "./components/Header/Header";
 const myID='4319e25fb7c3d02491092a7b206ffc8c';
 
 function App() {
-    // const [myState,setMyState] = useState('');
-    const [weatherNow,setWeatherNow] = useState('');
+    const [weatherNow,setWeatherNow] = useState({});
     const [weatherLong,setWeatherLong] = useState('');
     const [responseErr,setResponseErr]= useState('');
-    const [selectTown,setSelectTown] = useState('')
 
     const getRequest = (data)=>{
-        console.log(data)
+        console.log(data);
         axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${data.city}&lang=ru&appid=${myID}&lang=ru`)
             .then(res=> {
+                console.log(res);
                 setWeatherNow(res);
                 console.log(res.data);
                 setResponseErr('');
-                setSelectTown(res.data.name);
                 return res.data.name
             })
             .then(town =>getRequest2(town))
@@ -62,4 +61,3 @@ function App() {
 
 export default App;
 
-  

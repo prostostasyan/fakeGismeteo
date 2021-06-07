@@ -1,15 +1,14 @@
 import style from './Content.module.css'
-import icon from './icon/weatherIcon.png';
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import moment from 'moment';// подключаем библиотеку для удобной работы с датой
 import 'moment/locale/ru';
-import {Map, Placemark, YMaps} from "react-yandex-maps";
+import {Map,YMaps} from "react-yandex-maps";
 // подключаем язык
 moment.locale('ru'); // выбираем нужный язык
 
 
-const сountryObj = require('../../сountryBase/countryBase.json');//подключаем базу стран в JSON
+const countryObj = require('../../сountryBase/countryBase.json');//подключаем базу стран в JSON
 
 
 let Context = ({main, weather, name, sys, wind, list, coord}) => {
@@ -25,19 +24,19 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
 
 
     useEffect(() => {
-        setDayWeather(moment(getTime).format('MMMM Do, YYYY'));
-        // console.log(moment(dayWeather).format('e'));
-    });
-    useEffect(() => {
-        setStart(0);
         setFinish(finishToday);
+        setStart(0);
         // console.log(moment(dayWeather).format('e'));
-    },[coord]);
+    },[coord, finishToday]);
+
+    useEffect(() => {
+        setDayWeather(moment(getTime).format('MMMM Do, YYYY'));
+    },[getTime]);
 
 
     const day = () => {
-        if (moment(dayNow).format('D') == moment(list[start].dt * 1000).format('D')) return ('сегодня');
-        if (1 + +(moment(dayNow).format('D')) == moment(list[start].dt * 1000).format('D')) return ('завтра');
+        if (moment(dayNow).format('D') === moment(list[start].dt * 1000).format('D')) return ('сегодня');
+        if (1 + +(moment(dayNow).format('D')) === +moment(list[start].dt * 1000).format('D')) return ('завтра');
         return ' '
     }
 
@@ -63,12 +62,15 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
                     setFinish(finishMax);
                 }
                 break;
+            default:
+                console.log( "Нет таких значений" );
         }
     }
     // console.log('start:', start)
     // console.log('finish:', finish)
     const countryName = () => {
-        let objCont = сountryObj.country.find(country => country.alpha2 === sys.country);
+        console.log(countryObj.country[0] );
+        let objCont = countryObj.country.find(country => country.alpha2 === sys.country);
         return (objCont) ? objCont.name : 'Неизвестно'
     };
     // console.log(list);
@@ -111,7 +113,7 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
         <div className={style.mainContent}>
             <div className={style.text}> Страна: {countryName()} &emsp;  Город: {name} </div>
             <div className={style.data}
-                 style={(moment().format('e') == 5 || (moment().format('e')) == 6) ? {color: 'red'} : {color: 'black'}}>{moment().format('MMMM Do YYYY, HH:mm')}</div>
+                 style={(+moment().format('e') === 5 || +moment().format('e') === 6) ? {color: 'red'} : {color: 'black'}}>{moment().format('MMMM Do YYYY, HH:mm')}</div>
             <div className={style.today}>сейчас</div>
             <div className={style.text}>Ветер: {wind.speed} м/с, {directWind(wind.deg)} </div>
             <div className={style.text}>Давление: {Math.floor(main.pressure * 0.75)} мм рт. ст.</div>
@@ -124,13 +126,13 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
         </div>
 
         <div className={style.iconContent}>
-            <img src={`http://openweathermap.org/img/wn/${weather[0].icon}@4x.png`} className={style.iconImg}/>
+            <img src={`http://openweathermap.org/img/wn/${weather[0].icon}@4x.png`} className={style.iconImg} alt={'Нет картинки'}/>
             <div className={style.textImg}>{weather[0].description}</div>
         </div>
 
         <div className={style.longWeatherContent}>
             <div className={style.dayWeather}
-                 style={(moment(list[start].dt * 1000).format('e') == 5 || (moment(list[start].dt * 1000).format('e') == 6)) ? {color: 'red'} : {color: 'black'}}>{dayWeather}</div>
+                 style={(+moment(list[start].dt * 1000).format('e') === 5 || (+moment(list[start].dt * 1000).format('e') === 6)) ? {color: 'red'} : {color: 'black'}}>{dayWeather}</div>
             <div className={style.today}>
                 {day()}
             </div>
@@ -144,7 +146,7 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
                         <div>{time}</div>
                         <div>t: {convertKtoC(pieceTime.main.temp)} </div>
                         <img src={`http://openweathermap.org/img/wn/${pieceTime.weather[0].icon}@2x.png`}
-                             className={style.miniIconImg}/>
+                             className={style.miniIconImg} alt={pieceTime.weather[0].description}/>
                     </div>
                 })}
                 {(finish !== finishMax) && <button onClick={() => nextPrevWeather('next')}>&#10095;</button>}

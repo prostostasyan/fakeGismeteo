@@ -2,6 +2,11 @@ Form{
     padding:20px 0;
     background-color: navajowhite;
 }
+
+.searchContainer{
+
+}
+
 .searchCity{
     display: inline-block;
 }

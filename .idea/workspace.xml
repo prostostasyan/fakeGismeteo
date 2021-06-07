@@ -5,9 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +78,7 @@
       <workItem from="1622711704187" duration="2540000" />
       <workItem from="1622783752347" duration="600000" />
       <workItem from="1622885200242" duration="198000" />
+      <workItem from="1623052991465" duration="6715000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -128,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622721286686</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавил небольшие правки">
+      <created>1623053042000</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623053042000</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,18 +153,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="Добавил небольшие правки" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1468" y="270" key="CommitChangelistDialog2" timestamp="1622721284966">
+    <state x="1468" y="270" key="CommitChangelistDialog2" timestamp="1623053041079">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1468" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1622721284966" />
+    <state x="1468" y="270" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623053041079" />
     <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1622042810598">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1622042810598" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1622721292294">
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623053050599">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1622721292294" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623053050599" />
+    <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623052997787">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623052997787" />
     <state x="1019" y="489" key="run.anything.popup" timestamp="1622035201715">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
