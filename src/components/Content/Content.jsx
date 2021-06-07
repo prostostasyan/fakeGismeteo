@@ -132,7 +132,7 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
 
         <div className={style.longWeatherContent}>
             <div className={style.dayWeather}
-                 style={(+moment(list[start].dt * 1000).format('e') === 5 || (+moment(list[start].dt * 1000).format('e') === 6)) ? {color: 'red'} : {color: 'black'}}>{dayWeather}</div>
+                 style={(+moment(list[start].dt * 1000).format('e') === 6 || (+moment(list[start].dt * 1000).format('e') === 0)) ? {color: 'red'} : {color: 'black'}}>{dayWeather}</div>
             <div className={style.today}>
                 {day()}
             </div>

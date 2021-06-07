@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,7 @@
       <workItem from="1622711704187" duration="2540000" />
       <workItem from="1622783752347" duration="600000" />
       <workItem from="1622885200242" duration="198000" />
-      <workItem from="1623052991465" duration="9137000" />
+      <workItem from="1623052991465" duration="9927000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623080465078</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Внесенеы небольшие изменения">
+      <created>1623086964043</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623086964043</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,21 +168,22 @@
     <MESSAGE value="Добавил небольшие изменения в слайдере" />
     <MESSAGE value="Добавил небольшие правки" />
     <MESSAGE value="Исправил большинство предупреждений ESLint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил большинство предупреждений ESLint" />
+    <MESSAGE value="Внесенеы небольшие изменения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Внесенеы небольшие изменения" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623080464067">
+    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623086962681">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623080464067" />
+    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623086962681" />
     <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1623086731071">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1623086731071" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623080470797">
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623086966961">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623080470797" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623086966961" />
     <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623080548834">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
