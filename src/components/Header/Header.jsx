@@ -3,7 +3,7 @@ import style from './Header.module.css'
 // import logo from "../../_img/logoHeader.svg";
 
 
-function Header() {
+function Header() { 
     return <header >
         <div className={style.logoHeader}> </div>
         <h1
