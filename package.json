@@ -11,6 +11,7 @@
     "@types/react": "^17.0.8",
     "@types/react-dom": "^17.0.5",
     "axios": "^0.21.1",
+    "husky": "^6.0.0",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -31,6 +32,11 @@
       "react-app/jest"
     ]
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "prettier --write . && git add -A ."
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -42,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "2.3.1"
   }
 }

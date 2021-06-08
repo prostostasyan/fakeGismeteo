@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
+    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="Внесенеы небольшие изменения">
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +19,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="tsconfig.json" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1sez3waA9CSS6vJeMaWiFhD53f2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -31,23 +43,39 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../React/Reposit/MySite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="ts.external.directory.path" value="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\node_modules\typescript\lib" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="E:\_КУРСЫ\HTML_akademy\fakeGismeteo\node_modules\prettier" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="E:\_КУРСЫ\HTML_akademy\fakeGismeteo\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\public" />
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Search" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Header" />
       <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Search" />
       <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Content" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\public" />
-      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Search" />
-    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Content.jsx" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/Content/Content.jsx" working-dir="$PROJECT_DIR$/src/components/Content">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.Content.jsx" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -74,7 +102,13 @@
       <workItem from="1622711704187" duration="2540000" />
       <workItem from="1622783752347" duration="600000" />
       <workItem from="1622885200242" duration="198000" />
-      <workItem from="1623052991465" duration="9927000" />
+      <workItem from="1623052991465" duration="11561000" />
+      <workItem from="1623135015612" duration="2051000" />
+      <workItem from="1623144952350" duration="2528000" />
+      <workItem from="1623152536579" duration="3539000" />
+      <workItem from="1623156091314" duration="577000" />
+      <workItem from="1623156738804" duration="55000" />
+      <workItem from="1623156804134" duration="4256000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -153,11 +187,28 @@
       <option name="project" value="LOCAL" />
       <updated>1623086964043</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Внесенеы небольшие изменения">
+      <created>1623090891111</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1623090891111</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Попытка сделать форму из 3-х Input" />
@@ -172,18 +223,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="Внесенеы небольшие изменения" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623086962681">
+    <state x="1151" y="612" width="543" height="457" key="#ESLint" timestamp="1623157746343">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623086962681" />
-    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1623086731071">
+    <state x="1151" y="612" width="543" height="457" key="#ESLint/0.0.2560.1400@0.0.2560.1400" timestamp="1623157746343" />
+    <state x="1687" y="502" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623147252467">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1623086731071" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623086966961">
+    <state x="1687" y="502" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1623147252467" />
+    <state x="1668" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1623152940787">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623086966961" />
+    <state x="1668" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1623152940787" />
+    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623162943876">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623162943876" />
+    <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog" timestamp="1623158405604">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1623158405604" />
+    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1623156783158">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1623156783158" />
+    <state width="1260" height="248" key="GridCell.Tab.0.bottom" timestamp="1623152522324">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1260" height="248" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1623152522324" />
+    <state width="1260" height="248" key="GridCell.Tab.0.center" timestamp="1623152522324">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1260" height="248" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1623152522324" />
+    <state width="1260" height="248" key="GridCell.Tab.0.left" timestamp="1623152522324">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1260" height="248" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1623152522324" />
+    <state width="1260" height="248" key="GridCell.Tab.0.right" timestamp="1623152522324">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1260" height="248" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1623152522324" />
+    <state x="1422" y="345" key="SettingsEditor" timestamp="1623156792953">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1422" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1623156792953" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623090893035">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623090893035" />
     <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623080548834">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -192,9 +279,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1622035201715" />
-    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1622107096504">
+    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1623153810619">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1622107096504" />
+    <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1623153810619" />
   </component>
 </project>
