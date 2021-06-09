@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="Hasky final try">
+    <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pre-commit-hook.bat" beforeDir="false" afterPath="$PROJECT_DIR$/pre-commit-hook.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +111,7 @@
       <workItem from="1623230358961" duration="2564000" />
       <workItem from="1623232938189" duration="3704000" />
       <workItem from="1623236890186" duration="1373000" />
-      <workItem from="1623238277483" duration="563000" />
+      <workItem from="1623238277483" duration="653000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -324,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623238322954</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Hasky final try">
+      <created>1623238852230</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1623238852230</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,10 +381,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1668" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1623152940787" />
-    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623238581318">
+    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623238851515">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623238581318" />
+    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623238851515" />
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog" timestamp="1623158405604">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
