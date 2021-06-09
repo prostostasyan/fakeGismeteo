@@ -11,7 +11,6 @@
         "@types/react": "^17.0.8",
         "@types/react-dom": "^17.0.5",
         "axios": "^0.21.1",
-        "husky": "^6.0.0",
         "moment": "^2.29.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -35,7 +34,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit":"pretty-quick --staged"
+            "pre-commit": "pretty-quick --staged"
         }
     },
     "browserslist": {
@@ -51,6 +50,8 @@
         ]
     },
     "devDependencies": {
+        "husky": "^6.0.0",
+        "lint-staged": "^11.0.0",
         "prettier": "^2.3.1",
         "pretty-quick": "^3.1.0"
     }
