@@ -157,7 +157,7 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
                         {convertKtoC(main.temp_max)}
                     </span>
                 </div>
-                <br/>
+                <br />
                 <div className={style.text}>
                     Чувствуется: {convertKtoC(main.feels_like)}{' '}
                 </div>
