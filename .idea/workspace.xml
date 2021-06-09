@@ -108,7 +108,7 @@
       <workItem from="1623224291686" duration="1018000" />
       <workItem from="1623227688768" duration="2635000" />
       <workItem from="1623230358961" duration="2564000" />
-      <workItem from="1623232938189" duration="939000" />
+      <workItem from="1623232938189" duration="2133000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -243,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623233857168</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Hasky try 5">
+      <created>1623233905460</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1623233905460</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +282,6 @@
     <MESSAGE value="Hasky try 4" />
     <MESSAGE value="Hasky try 5" />
     <option name="LAST_COMMIT_MESSAGE" value="Hasky try 5" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1151" y="612" width="543" height="457" key="#ESLint" timestamp="1623157746343">
@@ -290,10 +296,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1668" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1623152940787" />
-    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623233855320">
+    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623233974861">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623233855320" />
+    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623233974861" />
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog" timestamp="1623158405604">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
