@@ -25,7 +25,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "prettier": "npx prettier --write .",
-        "bar": "echo Hello_World"
+        "precommit": "echo Hello_World"
     },
     "eslintConfig": {
         "extends": [
@@ -35,7 +35,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "pretty-quick --staged"
+            "pre-commit": "pretty-quick --staged "
         }
     },
     "browserslist": {
