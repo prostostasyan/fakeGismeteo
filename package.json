@@ -25,9 +25,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "npx prettier --write .",
-    "bar": "echo \"bar\" && exit 0"
+    "foo": "echo \"fooo\" && exit 0"
   },
-  "precommit": "bar",
+  "precommit": "foo",
   "eslintConfig": {
     "extends": [
       "react-app",
