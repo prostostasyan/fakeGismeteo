@@ -1,1 +1,1 @@
-echo "Hello World"
+npx prettier --write .
