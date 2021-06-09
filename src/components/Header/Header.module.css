@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -6,8 +6,8 @@ header{
     background-color: #61dafb;
 }
 
-.logoHeader{
-    background: url("../../_img/logoHeader.PNG");
+.logoHeader {
+    background: url('../../_img/logoHeader.PNG');
     background-color: red;
     height: 100%;
     width: 180px;
@@ -21,4 +21,3 @@ header{
     font-weight: bolder;
     font-size: 34px;
 }
-

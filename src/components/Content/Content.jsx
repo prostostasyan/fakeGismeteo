@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 
 import moment from 'moment'; // подключаем библиотеку для удобной работы с датой
 import 'moment/locale/ru';
-import {Map, YMaps} from 'react-yandex-maps';
+import { Map, YMaps } from 'react-yandex-maps';
 // подключаем язык
 moment.locale('ru'); // выбираем нужный язык
 
@@ -157,7 +157,7 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
                         {convertKtoC(main.temp_max)}
                     </span>
                 </div>
-                <br/>
+                <br />
                 <div className={style.text}>
                     Чувствуется: {convertKtoC(main.feels_like)}{' '}
                 </div>
