@@ -1,1 +1,1 @@
-yarn prettier
+yarn prettier --write . && git add -A .
