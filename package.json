@@ -25,7 +25,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "prettier": "npx prettier --write .",
-        "precommit": "echo Hello_World"
+        "precom": "echo Hello_World"
     },
     "eslintConfig": {
         "extends": [
@@ -33,11 +33,7 @@
             "react-app/jest"
         ]
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged "
-        }
-    },
+    "simple-pre-commit":"precom",
     "browserslist": {
         "production": [
             ">0.2%",
@@ -54,6 +50,7 @@
         "husky": "^6.0.0",
         "lint-staged": "^11.0.0",
         "prettier": "^2.3.1",
-        "pretty-quick": "^3.1.0"
+        "pretty-quick": "^3.1.0",
+        "simple-pre-commit": "^1.2.1"
     }
 }
