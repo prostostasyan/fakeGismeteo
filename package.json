@@ -33,7 +33,7 @@
             "react-app/jest"
         ]
     },
-    "simple-pre-commit":"precom",
+    "simple-pre-commit": "precom",
     "browserslist": {
         "production": [
             ">0.2%",
@@ -47,10 +47,8 @@
         ]
     },
     "devDependencies": {
-        "husky": "^6.0.0",
         "lint-staged": "^11.0.0",
         "prettier": "^2.3.1",
-        "pretty-quick": "^3.1.0",
-        "simple-pre-commit": "^1.2.1"
+        "pretty-quick": "^3.1.0"
     }
 }
