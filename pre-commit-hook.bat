@@ -1,1 +1,1 @@
-npx prettier --write .
+yarn prettier
