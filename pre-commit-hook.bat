@@ -1,1 +1,1 @@
-yarn lint-staged
+yarn prettier && git add -A .
