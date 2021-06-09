@@ -5,6 +5,7 @@ import Search from './components/Search/Search';
 import Content from './components/Content/Content';
 import axios from 'axios';
 import Header from './components/Header/Header';
+import {getCityWeatherData} from './api';
 
 const myID = '4319e25fb7c3d02491092a7b206ffc8c';
 
@@ -12,6 +13,14 @@ function App() {
     const [weatherNow, setWeatherNow] = useState({});
     const [weatherLong, setWeatherLong] = useState('');
     const [responseErr, setResponseErr] = useState('');
+
+    // const handleSearchFormSubmit = async (data) => {
+    //     console.log(data);
+    //     const response = await getCityWeatherData(data).catch((error) => {
+    //         setResponseErr(error.response);
+    //     });
+    //     console.log(response);
+    // };
 
     const getNowRequest = (data) => {
         console.log(data);
@@ -60,8 +69,8 @@ function App() {
         <div className="App">
             <Header />
             <Search
-                onFormSubmit={(city) => getNowRequest(city)}
-                data={responseErr.data}
+                onFormSubmit={getNowRequest}
+                data={responseErr.data || {}}
             />
             {weatherLong && <Content {...weatherNow.data} list={weatherLong} />}
         </div>

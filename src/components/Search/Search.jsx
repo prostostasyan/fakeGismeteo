@@ -46,12 +46,13 @@ let Form = (props) => {
     );
 };
 
-const Search = (props) => {
+const Search = ({onFormSubmit, data}) => {
     return (
         <div className={style.searchContainer}>
             <Form
-                onFormSubmit={(city) => props.onFormSubmit(city)}
-                {...props.data}
+                onFormSubmit={(city) => onFormSubmit(city)}
+                cod={data.cod}
+                message={data.message}
             />
         </div>
     );

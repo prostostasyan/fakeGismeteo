@@ -32,7 +32,7 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
         setDayWeather(moment(getTime).format('MMMM Do, YYYY'));
     }, [getTime]);
 
-    const day = () => {
+    const getPeriod = () => {
         if (
             moment(dayNow).format('D') ===
             moment(list[start].dt * 1000).format('D')
@@ -46,32 +46,53 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
         return ' ';
     };
 
-    const nextPrevWeather = (btn) => {
-        switch (btn) {
-            case 'prev':
-                setGetTime(getTime - 24 * 3600 * 1000);
-                if (start - 8 < 0) {
-                    setStart(0);
-                    setFinish(finishToday);
-                } else {
-                    setStart(start - 8);
-                    setFinish(finish - 8);
-                }
-                break;
-            case 'next':
-                setGetTime(getTime + 24 * 3600 * 1000);
-                if (finish + 8 < finishMax) {
-                    setStart(finish);
-                    setFinish(finish + 8);
-                } else {
-                    setStart(finishMax - 8);
-                    setFinish(finishMax);
-                }
-                break;
-            default:
-                console.log('Нет таких значений');
+    const handleNextWeather = () => {
+        setGetTime(getTime + 24 * 3600 * 1000);
+        if (finish + 8 < finishMax) {
+            setStart(finish);
+            setFinish(finish + 8);
+        } else {
+            setStart(finishMax - 8);
+            setFinish(finishMax);
         }
     };
+
+    const handlePrevWeather = () => {
+        setGetTime(getTime - 24 * 3600 * 1000);
+        if (start - 8 < 0) {
+            setStart(0);
+            setFinish(finishToday);
+        } else {
+            setStart(start - 8);
+            setFinish(finish - 8);
+        }
+    };
+    // const nextPrevWeather = (btn) => {
+    //     switch (btn) {
+    //         case 'prev':
+    //             setGetTime(getTime - 24 * 3600 * 1000);
+    //             if (start - 8 < 0) {
+    //                 setStart(0);
+    //                 setFinish(finishToday);
+    //             } else {
+    //                 setStart(start - 8);
+    //                 setFinish(finish - 8);
+    //             }
+    //             break;
+    //         case 'next':
+    //             setGetTime(getTime + 24 * 3600 * 1000);
+    //             if (finish + 8 < finishMax) {
+    //                 setStart(finish);
+    //                 setFinish(finish + 8);
+    //             } else {
+    //                 setStart(finishMax - 8);
+    //                 setFinish(finishMax);
+    //             }
+    //             break;
+    //         default:
+    //             console.log('Нет таких значений');
+    //     }
+    // };
     // console.log('start:', start)
     // console.log('finish:', finish)
     const countryName = () => {
@@ -184,10 +205,10 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
                 >
                     {dayWeather}
                 </div>
-                <div className={style.today}>{day()}</div>
+                <div className={style.today}>{getPeriod()}</div>
                 <div className={style.longWeather}>
                     {start !== 0 && (
-                        <button onClick={() => nextPrevWeather('prev')}>
+                        <button onClick={handlePrevWeather}>
                             &#10094;
                         </button>
                     )}
@@ -214,7 +235,7 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
                         );
                     })}
                     {finish !== finishMax && (
-                        <button onClick={() => nextPrevWeather('next')}>
+                        <button onClick={handleNextWeather}>
                             &#10095;
                         </button>
                     )}
