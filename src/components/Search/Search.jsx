@@ -5,7 +5,7 @@ let Form= (props) => {
     const [value, setValue] = useState({city:'', state:'', country:''});
     // const [check, setCheck] = useState('true');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e ) => {
         e.preventDefault();
         props.onFormSubmit(value);
         setValue({city:'', state:'', country:''})
