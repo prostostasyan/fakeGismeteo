@@ -226,8 +226,6 @@ let Context = ({main, weather, name, sys, wind, list, coord}) => {
 export default Context;
 
 // const months = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-// const dayWeek = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ',];
-// const dayNow = new Date().getDay();
 
 // const weatherPic = {
 //     'clear sky': {backgroundPosition: '90% 16.6%'},
