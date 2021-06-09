@@ -27,15 +27,13 @@
     "prettier": "npx prettier --write .",
     "bar": "echo \"bar\" && exit 0"
   },
+  "precommit": "bar",
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
-  "pre-commit": [
-    "bar"
-  ],
   "browserslist": {
     "production": [
       ">0.2%",
