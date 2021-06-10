@@ -1,78 +1,51 @@
 import React, {useState} from 'react';
-
 import './App.css';
 import Search from './components/Search/Search';
 import Content from './components/Content/Content';
-import axios from 'axios';
 import Header from './components/Header/Header';
-import {getCityWeatherData} from './api';
-
-const myID = '4319e25fb7c3d02491092a7b206ffc8c';
+import {getCityWeatherData, getCityWeatherFutureData} from './api';
 
 function App() {
     const [weatherNow, setWeatherNow] = useState({});
     const [weatherLong, setWeatherLong] = useState('');
     const [responseErr, setResponseErr] = useState('');
 
-    // const handleSearchFormSubmit = async (data) => {
-    //     console.log(data);
-    //     const response = await getCityWeatherData(data).catch((error) => {
-    //         setResponseErr(error.response);
-    //     });
-    //     console.log(response);
-    // };
-
-    const getNowRequest = (data) => {
-        console.log(data);
-        axios
-            .get(
-                `http://api.openweathermap.org/data/2.5/weather?q=${data.city}&lang=ru&appid=${myID}&lang=ru`
-            )
-            .then((res) => {
-                console.log(res);
-                setWeatherNow(res);
-                console.log(res.data);
-                setResponseErr('');
-                return res.data.name;
-            })
-            .then((town) => getFutureRequest(town))
-            .catch((error) => {
-                if (error.response) {
-                    console.log(error.response);
-                    setResponseErr(error.response);
-                } else if (error.request) {
-                    console.log(error.request);
-                }
-            });
-    };
-
-    const getFutureRequest = (city) => {
-        console.log(city);
-        axios
-            .get(
-                `http://api.openweathermap.org/data/2.5/forecast?q=${city}&lang=ru&appid=${myID}&lang=ru`
-            )
-            .then((res) => {
-                console.log('obj2', res.data);
-                setWeatherLong(res.data.list);
-            })
-            .catch((error) => {
-                if (error.response) {
-                    console.log(error.response);
-                } else if (error.request) {
-                    console.log(error.request);
-                }
-            });
+    const handleSearchFormSubmit = async (data) => {
+        try {
+            console.log(data);
+            const getWeatherNow = getCityWeatherData(data);
+            const responseWeatherNow = await getWeatherNow;
+            setResponseErr('');
+            console.log(responseWeatherNow);
+            if (responseWeatherNow.data === null) {
+                throw new responseWeatherNow.error();
+            }
+            setWeatherNow(responseWeatherNow.data);
+            const getWeatherFuture = getCityWeatherFutureData(
+                responseWeatherNow.data.name
+            );
+            const responseWeatherFuture = await getWeatherFuture;
+            console.log(responseWeatherFuture);
+            setWeatherLong(responseWeatherFuture.data);
+        } catch (error) {
+            console.log(error);
+            if (error.response) {
+                console.log(error.response);
+                setResponseErr(error.response);
+            } else if (error.request) {
+                console.log(error.request);
+            }
+        }
     };
 
     return (
         <div className="App">
             <Header />
             <Search
-                onFormSubmit={getNowRequest}
+                onFormSubmit={handleSearchFormSubmit}
                 data={responseErr.data || {}}
             />
-            {weatherLong && <Content {...weatherNow.data} list={weatherLong} />}
+            {weatherLong && <Content {...weatherNow} list={weatherLong} />}
         </div>
     );
 }
