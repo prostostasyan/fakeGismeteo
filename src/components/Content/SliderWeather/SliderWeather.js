@@ -4,61 +4,72 @@ import {convertKelvinToCelsius} from '../../../lib/convertKelvinToCelsius';
 import React, {useEffect, useState} from 'react';
 
 let SliderWeather = ({coord, list}) => {
-    const finishToday = 8 - moment(list[0].dt * 1000).format('HH') / 3;
-    const finishMax = 40 - moment(list[0].dt * 1000).format('HH') / 3;
+    const second = 1000;
+    const hour = 3600000;
+    const amountElemSlider = 8;
+    const listLength = 40;
+    const finishCurrentSliderWeatherBlock =
+        amountElemSlider - moment(list[0].dt * 1 * second).format('HH') / 3;
+    const finishListSliderWeather =
+        listLength - moment(list[0].dt * 1 * second).format('HH') / 3;
     const dayNow = new Date().getTime();
 
-    const [start, setStart] = useState(0);
+    const [startBlockSlider, setStartBlockSlider] = useState(0);
+    const dayOfWeekCurrent = Number(
+        moment(list[startBlockSlider].dt * 1 * second).format('e')
+    );
     const [currentDateWeather, setCurrentDateWeather] = useState(
         moment().format('MMMM Do YYYY')
     );
-    const [finish, setFinish] = useState(finishToday);
+    const [finishBlockSlider, setFinishBlockSlider] = useState(
+        finishCurrentSliderWeatherBlock
+    );
     const [getTime, setGetTime] = useState(dayNow);
 
-    const handleNextWeather = () => {
-        setGetTime(getTime + 24 * 3600 * 1000);
-        if (finish + 8 < finishMax) {
-            setStart(finish);
-            setFinish(finish + 8);
-        } else {
-            setStart(finishMax - 8);
-            setFinish(finishMax);
-        }
-    };
-
-    const handlePrevWeather = () => {
-        setGetTime(getTime - 24 * 3600 * 1000);
-        if (start - 8 < 0) {
-            setStart(0);
-            setFinish(finishToday);
-        } else {
-            setStart(start - 8);
-            setFinish(finish - 8);
-        }
-    };
-
     useEffect(() => {
-        setFinish(finishToday);
-        setStart(0);
-        // console.log(moment(dayWeather).format('e'));
-    }, [coord, finishToday]);
+        setFinishBlockSlider(finishCurrentSliderWeatherBlock);
+        setStartBlockSlider(0);
+        setGetTime(dayNow);
+    }, [coord, finishCurrentSliderWeatherBlock]);
 
     useEffect(() => {
         setCurrentDateWeather(moment(getTime).format('MMMM Do, YYYY'));
     }, [getTime]);
 
+    const handleNextBlockSliderWeather = () => {
+        setGetTime(getTime + 24 * hour);
+        if (finishBlockSlider + amountElemSlider < finishListSliderWeather) {
+            setStartBlockSlider(finishBlockSlider);
+            setFinishBlockSlider(finishBlockSlider + amountElemSlider);
+        } else {
+            setStartBlockSlider(finishListSliderWeather - amountElemSlider);
+            setFinishBlockSlider(finishListSliderWeather);
+        }
+    };
+
+    const handlePrevBlockSliderWeather = () => {
+        setGetTime(getTime - 24 * hour);
+        if (startBlockSlider - amountElemSlider < 0) {
+            setStartBlockSlider(0);
+            setFinishBlockSlider(finishCurrentSliderWeatherBlock);
+        } else {
+            setStartBlockSlider(startBlockSlider - amountElemSlider);
+            setFinishBlockSlider(finishBlockSlider - amountElemSlider);
+        }
+    };
+
     const setTodayOrTomorrow = () => {
         if (
             moment(dayNow).format('D') ===
-            moment(list[start].dt * 1000).format('D')
+            moment(list[startBlockSlider].dt * second).format('D')
         )
             return 'сегодня';
         else if (
             1 + +moment(dayNow).format('D') ===
-            +moment(list[start].dt * 1000).format('D')
+            +moment(list[startBlockSlider].dt * second).format('D')
         )
             return 'завтра';
-        else return '&#8291;';
+        else return <span>&#8291;</span>;
     };
 
     return (
@@ -66,8 +77,7 @@ let SliderWeather = ({coord, list}) => {
             <div
                 className={style.currentDateWeather}
                 style={
-                    +moment(list[start].dt * 1000).format('e') === 6 ||
-                    +moment(list[start].dt * 1000).format('e') === 0
+                    dayOfWeekCurrent === 5 || dayOfWeekCurrent === 6
                         ? {color: 'red'}
                         : {color: 'black'}
                 }
@@ -76,31 +86,45 @@ let SliderWeather = ({coord, list}) => {
             </div>
             <div className={style.today}>{setTodayOrTomorrow()}</div>
             <div className={style.longWeather}>
-                {start !== 0 && (
-                    <button onClick={handlePrevWeather}>&#10094;</button>
+                {startBlockSlider !== 0 && (
+                    <button onClick={handlePrevBlockSliderWeather}>
+                        &#10094;
+                    </button>
                 )}
-                {list.slice(start, finish).map((pieceTime, index) => {
-                    const match = moment(pieceTime.dt * 1000).format(
-                        'ddd, D MMM'
-                    );
-                    const time = moment(pieceTime.dt * 1000).format('HH:mm');
-                    return (
-                        <div key={index} className={style.futureWeather}>
-                            <div>{match}</div>
-                            <div>{time}</div>
-                            <div>
-                                t: {convertKelvinToCelsius(pieceTime.main.temp)}{' '}
+                {list
+                    .slice(startBlockSlider, finishBlockSlider)
+                    .map((pieceTime, index) => {
+                        const match = moment(pieceTime.dt * second).format(
+                            'ddd, D MMM'
+                        );
+                        const time = moment(pieceTime.dt * second).format(
+                            'HH:mm'
+                        );
+                        return (
+                            <div
+                                key={index}
+                                className={style.elementSliderBlock}
+                            >
+                                <div>{match}</div>
+                                <div>{time}</div>
+                                <div>
+                                    t:{' '}
+                                    {convertKelvinToCelsius(
+                                        pieceTime.main.temp
+                                    )}{' '}
+                                </div>
+                                <img
+                                    src={`http://openweathermap.org/img/wn/${pieceTime.weather[0].icon}@2x.png`}
+                                    className={style.miniIconImg}
+                                    alt={pieceTime.weather[0].description}
+                                />
                             </div>
-                            <img
-                                src={`http://openweathermap.org/img/wn/${pieceTime.weather[0].icon}@2x.png`}
-                                className={style.miniIconImg}
-                                alt={pieceTime.weather[0].description}
-                            />
-                        </div>
-                    );
-                })}
-                {finish !== finishMax && (
-                    <button onClick={handleNextWeather}>&#10095;</button>
+                        );
+                    })}
+                {finishBlockSlider !== finishListSliderWeather && (
+                    <button onClick={handleNextBlockSliderWeather}>
+                        &#10095;
+                    </button>
                 )}
             </div>
         </div>

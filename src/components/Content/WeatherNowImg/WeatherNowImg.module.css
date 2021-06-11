@@ -1,0 +1,12 @@
+.iconContent {
+    float: right;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.textImg {
+    font-weight: 700;
+    margin-left: -25px;
+}
