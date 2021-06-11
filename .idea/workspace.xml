@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Content/Map/Map.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Content/Map/MapContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Content/SliderWeather/SliderWeather.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Content/SliderWeather/SliderWeather.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/convertKelvinToCelsius.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/getFullContryName.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/windDirect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/convertKtoC.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +28,7 @@
       <list>
         <option value="package.json" />
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../React/Reposit/MySite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Content/SliderWeather" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -53,14 +66,16 @@
     <property name="ts.external.directory.path" value="E:\_КУРСЫ\HTML_akademy\fakeGismeteo\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\_КУРСЫ\HTML_akademy\fakeGismeteo\src\components\Content\SliderWeather" />
+      <recent name="E:\_КУРСЫ\HTML_akademy\fakeGismeteo\src\components\Content\Map" />
+      <recent name="E:\_КУРСЫ\HTML_akademy\fakeGismeteo\src\lib" />
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Header" />
+      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Search" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\public" />
       <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Search" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Header" />
-      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Search" />
-      <recent name="E:\_КУРСЫ\HTML_akademy\homebrewGISMETEO\src\components\Content" />
     </key>
   </component>
   <component name="RunManager">
@@ -113,7 +128,8 @@
       <workItem from="1623236890186" duration="1373000" />
       <workItem from="1623238277483" duration="2433000" />
       <workItem from="1623263008652" duration="1465000" />
-      <workItem from="1623325836003" duration="13301000" />
+      <workItem from="1623325836003" duration="19119000" />
+      <workItem from="1623395740098" duration="10274000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -353,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623244806872</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fix API">
+      <created>1623339493806</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623339493807</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +408,8 @@
     <MESSAGE value="Hasky try 4" />
     <MESSAGE value="Hasky try 5" />
     <MESSAGE value="Hasky final try" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hasky final try" />
+    <MESSAGE value="Fix API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix API" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1151" y="612" width="543" height="457" key="#ESLint" timestamp="1623157746343">
@@ -404,10 +428,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1668" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1623152940787" />
-    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623244806217">
+    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623339492867">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623244806217" />
+    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623339492867" />
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog" timestamp="1623336190831">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -444,10 +468,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623326963684" />
-    <state x="1019" y="489" key="run.anything.popup" timestamp="1622035201715">
+    <state x="1019" y="489" key="run.anything.popup" timestamp="1623341878477">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1622035201715" />
+    <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1623341878477" />
     <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1623153810619">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

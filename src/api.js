@@ -24,6 +24,7 @@ const getCityWeatherData = (data) =>
             return {data: res.data, error: null};
         })
         .catch((error) => {
+            console.log(error);
             return {data: null, error: error};
         });
 
