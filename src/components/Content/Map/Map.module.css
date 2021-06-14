@@ -1,7 +1,16 @@
 .mapContent {
-    float: left;
+    display: inline-block;
+
+    /*margin: 0 auto;*/
 }
+
+.test {
+    /*border: 10px red solid;*/
+}
+
 .map {
-    width: 300px;
+    margin-top: 28px;
+    /*margin-bottom: -28px;*/
+    min-width: 300px;
     height: 300px;
 }

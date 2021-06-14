@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Content/CurrentWeatherInfo/CurrentWeatherInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Content/CurrentWeatherInfo/CurrentWeatherInfo.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Content/WeatherNowImg/WeatherNowImg.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Content/WeatherNowImg/WeatherNowImg.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/CurrentWeatherInfo/CurrentWeatherInfo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/CurrentWeatherInfo/CurrentWeatherInfo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Map/Map.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Map/Map.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Map/MapContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Map/MapContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/SliderWeather/SliderWeather.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/SliderWeather/SliderWeather.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/SliderWeather/SliderWeather.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/SliderWeather/SliderWeather.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/icon/weatherIcon(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/icon/weatherIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/WeatherNowImg/WeatherNowImg.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/WeatherNowImg/WeatherNowImg.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Content/weatherNowImg" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -125,7 +126,16 @@
       <workItem from="1623238277483" duration="2433000" />
       <workItem from="1623263008652" duration="1465000" />
       <workItem from="1623325836003" duration="19119000" />
-      <workItem from="1623395740098" duration="18867000" />
+      <workItem from="1623395740098" duration="19524000" />
+      <workItem from="1623472450826" duration="6562000" />
+      <workItem from="1623582102461" duration="161000" />
+      <workItem from="1623582274541" duration="6307000" />
+      <workItem from="1623605521305" duration="8915000" />
+      <workItem from="1623657629268" duration="16000" />
+      <workItem from="1623660647398" duration="219000" />
+      <workItem from="1623670144989" duration="1352000" />
+      <workItem from="1623677000467" duration="1295000" />
+      <workItem from="1623679320844" duration="34000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -379,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623420197384</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Refactoring Context V1">
+      <created>1623429569596</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1623429569596</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,37 +430,38 @@
     <MESSAGE value="Hasky final try" />
     <MESSAGE value="Fix API" />
     <MESSAGE value="Fix components Context &amp;  Search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix components Context &amp;  Search" />
+    <MESSAGE value="Refactoring Context V1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring Context V1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1151" y="612" width="543" height="457" key="#ESLint" timestamp="1623157746343">
+    <state x="1151" y="612" width="543" height="457" key="#ESLint" timestamp="1623582149098">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1151" y="612" width="543" height="457" key="#ESLint/0.0.2560.1400@0.0.2560.1400" timestamp="1623157746343" />
+    <state x="1151" y="612" width="543" height="457" key="#ESLint/0.0.2560.1400@0.0.2560.1400" timestamp="1623582149098" />
     <state x="1166" y="564" key="#Notifications" timestamp="1623238237586">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1166" y="564" key="#Notifications/0.0.2560.1400@0.0.2560.1400" timestamp="1623238237586" />
-    <state x="1687" y="502" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623147252467">
+    <state x="1687" y="502" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623472608154">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1687" y="502" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1623147252467" />
+    <state x="1687" y="502" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1623472608154" />
     <state x="1668" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1623152940787">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1668" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1623152940787" />
-    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623420195494">
+    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623429567952">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623420195494" />
+    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623429567952" />
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog" timestamp="1623336190831">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1623336190831" />
-    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1623327370928">
+    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1623678275951">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1623327370928" />
+    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1623678275951" />
     <state width="1260" height="248" key="GridCell.Tab.0.bottom" timestamp="1623152522324">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -464,18 +482,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1422" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1623236880815" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623420201036">
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623429578044">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623420201036" />
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623429578044" />
     <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623326963684">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623326963684" />
-    <state x="1019" y="489" key="run.anything.popup" timestamp="1623341878477">
+    <state x="1019" y="489" key="run.anything.popup" timestamp="1623615158306">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1623341878477" />
+    <state x="1019" y="489" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1623615158306" />
     <state x="1583" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1623153810619">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

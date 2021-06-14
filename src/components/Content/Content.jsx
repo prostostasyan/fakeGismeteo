@@ -14,9 +14,16 @@ moment.locale('ru'); // выбираем нужный язык momentJS
 let Context = ({main, weather, name, sys, wind, list, coord}) => {
     return (
         <div className={style.contentContainer}>
-            <MapContainer coord={coord} />
-            <CurrentWeatherInfo main={main} name={name} sys={sys} wind={wind} />
-            <WeatherNowImg weather={weather[0]} />
+            <div className={style.main}>
+                <MapContainer coord={coord} />
+                <CurrentWeatherInfo
+                    main={main}
+                    name={name}
+                    sys={sys}
+                    wind={wind}
+                />
+                <WeatherNowImg weather={weather[0]} />
+            </div>
             <SliderWeather coord={coord} list={list} />
         </div>
     );

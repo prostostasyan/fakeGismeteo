@@ -1,12 +1,14 @@
 .sliderWeatherContent {
     display: inline-block;
     width: 100%;
+    background-color: dimgrey;
 }
 
 .today {
-    color: grey;
+    color: snow;
     font-size: 15px;
     text-align: left;
+    margin-left: 15px;
 }
 
 .elementSliderBlock {
@@ -31,7 +33,7 @@
     display: inline-block;
     color: rosybrown;
     height: 200px;
-    width: 40px;
+    width: 32px;
     position: relative;
     transform: translate(0, -15%);
 }
@@ -40,4 +42,5 @@
     font-size: 24px;
     font-weight: bolder;
     text-align: left;
+    margin-left: 15px;
 }

@@ -6,7 +6,13 @@ import React, {useEffect, useState} from 'react';
 let SliderWeather = ({coord, list}) => {
     const second = 1000;
     const hour = 3600000;
-    const amountElemSlider = 8;
+    const ElemSliderPerDay = 8;
+    const [amountElemSlider, setAmountElemSlider] = useState(ElemSliderPerDay);
+    useEffect(() => {
+        if (screen.width < 800) setAmountElemSlider(6);
+        if (screen.width < 600) setAmountElemSlider(3);
+    }, [screen.width]);
+
     const listLength = 40;
     const finishCurrentSliderWeatherBlock =
         amountElemSlider - moment(list[0].dt * 1 * second).format('HH') / 3;
@@ -37,7 +43,7 @@ let SliderWeather = ({coord, list}) => {
     }, [getTime]);
 
     const handleNextBlockSliderWeather = () => {
-        setGetTime(getTime + 24 * hour);
+        setGetTime(getTime + 24 * hour * (amountElemSlider / ElemSliderPerDay));
         if (finishBlockSlider + amountElemSlider < finishListSliderWeather) {
             setStartBlockSlider(finishBlockSlider);
             setFinishBlockSlider(finishBlockSlider + amountElemSlider);
@@ -48,7 +54,7 @@ let SliderWeather = ({coord, list}) => {
     };
 
     const handlePrevBlockSliderWeather = () => {
-        setGetTime(getTime - 24 * hour);
+        setGetTime(getTime - 24 * hour * (amountElemSlider / ElemSliderPerDay));
         if (startBlockSlider - amountElemSlider < 0) {
             setStartBlockSlider(0);
             setFinishBlockSlider(finishCurrentSliderWeatherBlock);

@@ -1,8 +1,7 @@
 .mainContent {
-    float: left;
+    display: inline-block;
     height: 300px;
     width: 400px;
-    padding-top: 30px;
 }
 .mainContent > div:not(.temperature) {
     margin-left: 100px;

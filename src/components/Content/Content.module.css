@@ -1,4 +1,5 @@
 .contentContainer {
-    height: 300px;
+    display: inline-block;
+
     background-color: turquoise;
 }

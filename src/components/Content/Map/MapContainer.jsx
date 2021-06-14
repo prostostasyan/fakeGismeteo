@@ -6,7 +6,7 @@ const MapContainer = ({coord}) => {
     return (
         <div className={style.mapContent}>
             <YMaps>
-                <div>
+                <div className={style.test}>
                     <Map
                         className={style.map}
                         state={{center: [coord.lat, coord.lon], zoom: 11}}
