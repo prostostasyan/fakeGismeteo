@@ -14,13 +14,23 @@ let SliderWeather = ({coord, list}) => {
     }, [screen.width]);
 
     const listLength = 40;
+
+    const firstFinishCurrentSliderWeatherBlock = Math.ceil(
+        amountElemSlider - moment(list[0].dt * 1 * second).format('HH') / 3
+    );
+
     const finishCurrentSliderWeatherBlock =
-        amountElemSlider - moment(list[0].dt * 1 * second).format('HH') / 3;
+        firstFinishCurrentSliderWeatherBlock > 0
+            ? firstFinishCurrentSliderWeatherBlock
+            : 8 - Math.ceil(moment(list[0].dt * 1 * second).format('HH') / 3);
+
     const finishListSliderWeather =
-        listLength - moment(list[0].dt * 1 * second).format('HH') / 3;
+        listLength -
+        Math.ceil(moment(list[0].dt * 1 * second).format('HH') / 3);
     const dayNow = new Date().getTime();
 
     const [startBlockSlider, setStartBlockSlider] = useState(0);
+    console.log('startBlockSlider', startBlockSlider);
     const dayOfWeekCurrent = Number(
         moment(list[startBlockSlider].dt * 1 * second).format('e')
     );

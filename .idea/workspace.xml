@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="df2202a1-7155-4732-9227-327b6c108fa1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/Content.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/SliderWeather/SliderWeather.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/SliderWeather/SliderWeather.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +147,9 @@
       <workItem from="1623677000467" duration="1295000" />
       <workItem from="1623679320844" duration="852000" />
       <workItem from="1623740955598" duration="321000" />
-      <workItem from="1623746784870" duration="1854000" />
+      <workItem from="1623746784870" duration="2667000" />
+      <workItem from="1623771607469" duration="66000" />
+      <workItem from="1624025069682" duration="5002000" />
     </task>
     <task id="LOCAL-00001" summary="Попытка сделать форму из 3-х Input">
       <created>1621762231745</created>
@@ -395,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623679580627</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="edited README.md">
+      <created>1623750826387</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1623750826387</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,6 +438,17 @@
         <option value="3" />
         <option value="1" />
       </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
@@ -431,7 +471,8 @@
     <MESSAGE value="Fix components Context &amp;  Search" />
     <MESSAGE value="Refactoring Context V1" />
     <MESSAGE value="Add Responsive design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Responsive design" />
+    <MESSAGE value="edited README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1151" y="612" width="543" height="457" key="#ESLint" timestamp="1623582149098">
@@ -450,18 +491,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1668" y="555" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400@0.0.2560.1400" timestamp="1623152940787" />
-    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623679578502">
+    <state x="1107" y="363" key="CommitChangelistDialog2" timestamp="1623750825228">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623679578502" />
+    <state x="1107" y="363" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1623750825228" />
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog" timestamp="1623336190831">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="93" y="93" width="2375" height="1215" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1623336190831" />
-    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1623741275227">
+    <state x="1061" y="456" key="FileChooserDialogImpl" timestamp="1623771670401">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1623741275227" />
+    <state x="1061" y="456" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1623771670401" />
     <state width="1260" height="248" key="GridCell.Tab.0.bottom" timestamp="1623152522324">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -482,14 +523,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1422" y="345" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1623236880815" />
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623429578044">
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2" timestamp="1623750938446">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623429578044" />
-    <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623326963684">
+    <state x="873" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623750938446" />
+    <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1624025614736">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1623326963684" />
+    <state x="1117" y="624" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1624025614736" />
     <state x="1019" y="489" key="run.anything.popup" timestamp="1623615158306">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
